@@ -1,47 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>Formulário com validação JavaScript</title>
     <!-- styles -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link
+      rel="stylesheet"
+      href="./css/style.css" />
     <!-- scripts -->
-    <script src="./js/scripts.js" defer></script>
+    <script
+      src="./js/scripts.js"
+      defer></script>
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
     <div class="container">
-        <h1>Form com validação javaScript</h1>
+      <h1>Form com validação javaScript</h1>
+      <form id="form">
+        <progress id="progress" value="0" max="100"></progress>
         <div class="form-control">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" placeholder="Digite seu nome...">
+          <label for="name">Nome:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Digite seu nome..." />
         </div>
         <div class="form-control">
-            <label for="email">E-mail:</label>
-            <input type="text" id="email" name="email" placeholder="Digite seu e-mail...">
+          <label for="email">E-mail:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Digite seu e-mail..." />
         </div>
         <div class="form-control">
-            <label for="password">Nome:</label>
-            <input type="password" id="password" name="password" placeholder="Digite sua senha...">
+          <label for="password">Senha:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Digite sua senha..." />
         </div>
         <div class="form-control">
-            <label for="job">Situação de trabalho:</label>
-            <select name="job" id="job">
-                <option value="">Está buscando emprego?</option>
-                <option value="yes">Sim</option>
-                <option value="no">Não</option>
-            </select>
+          <label for="job">Situação de trabalho:</label>
+          <select
+            name="job"
+            id="job">
+            <option value="">Está buscando emprego?</option>
+            <option value="yes">Sim</option>
+            <option value="no">Não</option>
+          </select>
         </div>
         <div class="form-control">
-            <label for="msg">Mensagem:</label>
-            <textarea name="msg" id="msg"></textarea>
+          <label for="msg">Mensagem:</label>
+          <textarea
+            name="msg"
+            id="msg"></textarea>
         </div>
-        <input class="btn" type="submit" value="Enviar">
+        <input
+          id="btn"
+          type="submit"
+          value="Enviar" />
+      </form>
     </div>
-</body>
+  </body>
 </html>
