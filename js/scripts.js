@@ -4,33 +4,38 @@ const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 const jobInput = document.querySelector("#job");
 const msgInput = document.querySelector("#msg");
+
 const progress = document.querySelector("#progress");
+
+const modal = document.querySelector("#modal");
+const closeButton = document.querySelector("#close-button");
+const modalMessage = document.querySelector("#modal-message");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (nameInput.value === "") {
-    alert("Insira o seu nome");
+    showModal("Insira o seu nome");
     return;
   }
 
   if (emailInput.value === "" || !isEmailValid(emailInput.value)) {
-    alert("Insira o seu e-mail");
+    showModal("Insira o seu e-mail");
     return;
   }
 
   if (!isPasswordvalid(passwordInput.value, 8)) {
-    alert("A senha deve ter no mínimo 8 carcteres");
+    showModal("A senha deve ter no mínimo 8 carcteres");
     return;
   }
 
   if (jobInput.value === "") {
-    alert("Selecione a sua situação");
+    showModal("Selecione a sua situação");
     return;
   }
 
   if (msgInput.value === "") {
-    alert("Escreva sua mensagem");
+    showModal("Escreva sua mensagem");
     return;
   }
 
@@ -69,3 +74,20 @@ form.addEventListener("input", () => {
 
   progress.value = (completedFields / totalFields) * 100;
 });
+
+// Modal
+
+function showModal(msg) {
+  modalMessage.textContent = msg;
+  modal.style.display = "block";
+}
+
+closeButton.addEventListener("click", () => {
+    modal.style.display = "none"
+})
+
+window.addEventListener("click", (e) => {
+    if(e.target === modal) {
+        modal.style.display = "none"
+    }
+})
